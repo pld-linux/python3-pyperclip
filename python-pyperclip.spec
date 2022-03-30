@@ -7,7 +7,7 @@
 Summary:	A cross-platform clipboard module for Python
 Name:		python-pyperclip
 Version:	1.5.27
-Release:	6
+Release:	7
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/7b/a5/48eaa1f2d77f900679e9759d2c9ab44895e66e9612f7f6b5333273b68f29/pyperclip-%{version}.zip
