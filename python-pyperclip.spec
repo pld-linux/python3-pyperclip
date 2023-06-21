@@ -15,6 +15,7 @@ Source0:	https://files.pythonhosted.org/packages/source/p/pyperclip/pyperclip-%{
 URL:		https://pypi.python.org/project/pyperclip
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
+%{?with_doc:BuildRequires:	sphinx-pdg}
 %if %{with python2}
 BuildRequires:	python >= 1:2.6
 BuildRequires:	python-modules >= 1:2.6
