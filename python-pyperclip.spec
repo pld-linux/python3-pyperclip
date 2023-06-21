@@ -93,9 +93,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{py_sitescriptdir}/pyperclip
 %{py_sitescriptdir}/pyperclip-%{version}-py*.egg-info
-%if %{with doc}
-%doc docs/_build/html/*
-%endif
 %endif
 
 %if %{with python3}
@@ -103,7 +100,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{py3_sitescriptdir}/pyperclip
 %{py3_sitescriptdir}/pyperclip-%{version}-py*.egg-info
-%if %{with doc}
-%doc docs/_build/html/*
 %endif
+
+%if %{with doc}
+%files apidocs
+%doc docs/_build/html/*
 %endif
