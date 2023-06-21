@@ -6,22 +6,26 @@
 
 Summary:	A cross-platform clipboard module for Python
 Name:		python-pyperclip
-Version:	1.5.27
-Release:	7
+Version:	1.8.2
+Release:	1
 License:	BSD
 Group:		Libraries/Python
-Source0:	https://pypi.python.org/packages/7b/a5/48eaa1f2d77f900679e9759d2c9ab44895e66e9612f7f6b5333273b68f29/pyperclip-%{version}.zip
-# Source0-md5:	18b86c2e6d10ed827cdd42aed80b4cbe
-URL:		https://pypi.python.org/pypi/pyperclip
+Source0:	https://files.pythonhosted.org/packages/source/p/pyperclip/pyperclip-%{version}.tar.gz
+# Source0-md5:	853603b2e8fa1b13622fdbe72d1fb201
+URL:		https://pypi.python.org/project/pyperclip
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with python2}
+BuildRequires:	python >= 1:2.6
+BuildRequires:	python-modules >= 1:2.6
 BuildRequires:	python-setuptools
 %endif
 %if %{with python3}
+BuildRequires:	python3 >= 1:3.1
+BuildRequires:	python3-modules >= 1:3.1
 BuildRequires:	python3-setuptools
 %endif
-Requires:	python-modules
+Requires:	python-modules >= 1:2.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +36,7 @@ for now)
 %package -n python3-pyperclip
 Summary:	A cross-platform clipboard module for Python
 Group:		Libraries/Python
-Requires:	python3-modules
+Requires:	python3-modules >= 1:3.1
 
 %description -n python3-pyperclip
 A cross-platform clipboard module for Python. (only handles plain text
