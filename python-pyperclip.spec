@@ -9,7 +9,7 @@ Summary:	A cross-platform clipboard module for Python
 Summary(pl.UTF-8):	Wieloplatformowy moduł schowka dla Pythona
 Name:		python-pyperclip
 Version:	1.8.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/p/pyperclip/pyperclip-%{version}.tar.gz
