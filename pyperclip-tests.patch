@@ -1,0 +1,21 @@
+HAS_DISPLAY disappeared before 1.9.0 release, tests hasn't been updated yet
+--- pyperclip-1.9.0/tests/test_pyperclip.py.orig	2024-06-18 20:46:25.000000000 +0200
++++ pyperclip-1.9.0/tests/test_pyperclip.py	2025-07-09 18:22:37.560176946 +0200
+@@ -8,7 +8,7 @@ import platform
+ #import sys
+ #sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+ 
+-from pyperclip import _executable_exists, HAS_DISPLAY
++from pyperclip import _executable_exists
+ from pyperclip import (init_osx_pbcopy_clipboard, init_osx_pyobjc_clipboard,
+                                   init_dev_clipboard_clipboard,
+                                   init_qt_clipboard,
+@@ -135,7 +135,7 @@ class TestOSX(_TestClipboard):
+ 
+ 
+ class TestQt(_TestClipboard):
+-    if HAS_DISPLAY:
++    if os.getenv("DISPLAY", False):
+         try:
+             import PyQt5.QtWidgets
+         except ImportError:
